@@ -27,7 +27,7 @@ namespace Conexiones
         }
 
         public MySqlConnection getConexion()
-        {
+        {        
             if (conexion == null)
             {
                 conexion = new MySqlConnection(cadenaConexion);

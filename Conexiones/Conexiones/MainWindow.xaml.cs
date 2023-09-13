@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
@@ -97,6 +98,94 @@ namespace Conexiones
             {
                 MessageBox.Show("error al conectar a la bd");
             }
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void btnInsertar_Click(object sender, RoutedEventArgs e)
+        {
+            string Nombre = campoNombre.Text;
+            string Apellido = campoApellido.Text;
+            int edad = int.Parse(campoEdad.Text);
+
+            MySqlConnection conexion = mConexion.getConexion();
+
+            string consulta = "INSERT INTO usuarios (Nombre, Apellido, Edad) VALUE(@Nombre,@Apellido,@edad)";
+            if (mConexion.getConexion() != null)
+            {
+                using(MySqlCommand command = new MySqlCommand(consulta, conexion))
+                {
+                    command.Parameters.AddWithValue("@Nombre", Nombre);
+                    command.Parameters.AddWithValue("@Apellido", Apellido);
+                    command.Parameters.AddWithValue("@edad", edad);
+
+                    int filasAfectadas = command.ExecuteNonQuery();
+                
+                }
+            }
+            this.borrar("usuario agregado");
+            
+        }  
+        private void borrar(string valor)
+        {
+            campoNombre.Text = "";
+            campoApellido.Text = "";
+            campoEdad.Text = "";
+            MessageBox.Show(valor);
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            string Nombre = campoNombre.Text;
+            string Apellido = campoApellido.Text;
+            int edad = int.Parse(campoEdad.Text);
+
+            MySqlConnection conexion = mConexion.getConexion();
+
+            string consulta = "UPDATE usuarios SET Nombre = @Nombre, Apellido = @Apellido , edad = @Edad WHERE Id = 2;";
+            if (mConexion.getConexion() != null)
+            {
+                using (MySqlCommand command = new MySqlCommand(consulta, conexion))
+                {
+                    command.Parameters.AddWithValue("@Nombre", Nombre);
+                    command.Parameters.AddWithValue("@Apellido", Apellido);
+                    command.Parameters.AddWithValue("@edad", edad);
+
+                    int filasAfectadas = command.ExecuteNonQuery();
+
+                }
+            }
+            this.borrar("Datos Actualizados");
+        }
+
+        private void btnDelate_Click(object sender, RoutedEventArgs e)
+        {
+            string Nombre = campoNombre.Text;
+            MySqlConnection conexion = mConexion.getConexion();
+
+            string consulta = "DELETE FROM `usuarios` WHERE `usuarios`.`Nombre` = @Nombre";
+            if (mConexion.getConexion() != null)
+            {
+                using (MySqlCommand command = new MySqlCommand(consulta, conexion))
+                {
+                    command.Parameters.AddWithValue("@Nombre", Nombre);
+                    int filasAfectadas = command.ExecuteNonQuery();
+                }
+            }
+            this.borrar("Datos Eliminados ");
+        }
+
+        private void btnDrop_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }

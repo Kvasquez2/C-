@@ -7,8 +7,28 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button Content="Conexion" HorizontalAlignment="Center" Margin="0,202,0,0" VerticalAlignment="Top" Height="37" Width="90" Click="Button_Click"/>
-        <Button Content="Fecha Factura" HorizontalAlignment="Center" Margin="0,138,0,0" VerticalAlignment="Top" Click="Button_Click_1" Height="42" Width="96"/>
+        <Button x:Name="a" Content="Insertar" HorizontalAlignment="Left" Margin="688,30,0,0" VerticalAlignment="Top" Height="38" Width="90" Click="Button_Click"/>
+        <Button Content="Traer Dato" HorizontalAlignment="Left" Margin="416,100,0,0" VerticalAlignment="Top" Click="Button_Click_1" Height="42" Width="76"/>
+        <Label Content="Nombre" HorizontalAlignment="Left" Margin="20,48,0,0" VerticalAlignment="Top"/>
+        <Label Content="Apellido" HorizontalAlignment="Left" Margin="20,89,0,0" VerticalAlignment="Top"/>
+        <Label Content="Edad" HorizontalAlignment="Left" Margin="28,138,0,0" VerticalAlignment="Top" RenderTransformOrigin="-3.883,-0.384"/>
+        <TextBox x:Name="campoNombre" HorizontalAlignment="Left" Margin="106,52,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged"/>
+        <TextBox x:Name="campoApellido" HorizontalAlignment="Left" Margin="106,96,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="campoEdad" HorizontalAlignment="Left" Margin="106,142,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnInsertar" Content="Insertar" HorizontalAlignment="Left" Margin="274,15,0,0" VerticalAlignment="Top" Height="39" Width="76" Click="btnInsertar_Click"/>
+        <Button x:Name="btnUpdate" Content="Update" HorizontalAlignment="Left" Margin="274,63,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Width="76" Height="39" Click="Button_Click_2">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.056"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button x:Name="btnDelate" Content="Delate" HorizontalAlignment="Left" Margin="274,110,0,0" VerticalAlignment="Top" Width="76" Height="39" Click="btnDelate_Click"/>
+        <Button x:Name="btnDrop" Content="Drop" HorizontalAlignment="Left" Margin="276,157,0,0" VerticalAlignment="Top" Width="76" Height="39" Click="btnDrop_Click"/>
+        <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}" Margin="10,268,178,44" SelectionChanged="DataGrid_SelectionChanged"/>
 
     </Grid>
 </Window>

@@ -4,11 +4,11 @@
 winexe
 C#
 .cs
-C:\Users\Yesid\OneDrive\Escritorio\C#\Conexiones\Conexiones\obj\Debug\
+C:\Users\Yesid\OneDrive\Escritorio\C#\Conexiones\Conexiones\obj\Release\
 Conexiones
 none
 false
-DEBUG;TRACE
+TRACE
 C:\Users\Yesid\OneDrive\Escritorio\C#\Conexiones\Conexiones\App.xaml
 1219584333
 
@@ -16,5 +16,5 @@ C:\Users\Yesid\OneDrive\Escritorio\C#\Conexiones\Conexiones\App.xaml
 33-1204921277
 MainWindow.xaml;
 
-False
+True
 
