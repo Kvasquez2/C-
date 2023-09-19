@@ -1,0 +1,24 @@
+﻿<Window x:Class="Proyecto_final.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Proyecto_final"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Label x:Name="id_Persona" Content="ID Persona" HorizontalAlignment="Left" Margin="221,71,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="nombre" Content="Nombre" HorizontalAlignment="Left" Margin="227,118,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="apellido" Content="Apellido" HorizontalAlignment="Left" Margin="227,164,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Date" Content="fecha_Nacimiento" HorizontalAlignment="Left" Margin="227,208,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="campoId" HorizontalAlignment="Left" Margin="362,75,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="campoNombre" HorizontalAlignment="Left" Margin="362,122,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="campoApellido" HorizontalAlignment="Left" Margin="362,170,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="campoFecha" HorizontalAlignment="Left" Margin="362,216,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnInsert" Content="Insert" HorizontalAlignment="Left" Margin="33,131,0,0" VerticalAlignment="Top" Height="35" Width="65" Click="btnInsert_Click"/>
+        <Button x:Name="btnSelect" Content="Select" HorizontalAlignment="Left" Margin="33,84,0,0" VerticalAlignment="Top" Height="35" Width="65"/>
+        <Calendar HorizontalAlignment="Left" Margin="277,259,0,0" VerticalAlignment="Top" Height="165" Width="182"/>
+        <Button x:Name="btnUpdate" Content="Update" HorizontalAlignment="Left" Margin="33,177,0,0" VerticalAlignment="Top" Height="35" Width="65" Click="btnUpdate_Click"/>
+
+    </Grid>
+</Window>

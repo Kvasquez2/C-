@@ -1,0 +1,21 @@
+﻿<Window x:Class="Windows.Insert"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Windows"
+        mc:Ignorable="d"
+        Title="Insert" Height="450" Width="800">
+    <Grid>
+        <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="57,352,0,0" VerticalAlignment="Top" Height="52" Width="112" Click="btnBack_Click"/>
+        <Label Content="Insert" HorizontalAlignment="Center" Margin="0,59,0,0" VerticalAlignment="Top" FontSize="25"/>
+        <Label x:Name="___Sin_nombre_" Content="Precio" HorizontalAlignment="Left" Margin="220,149,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Label Content="Stock" HorizontalAlignment="Left" Margin="220,199,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <TextBox x:Name="campoPrecio" HorizontalAlignment="Left" Margin="355,158,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="campoStock" HorizontalAlignment="Left" Margin="355,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="120"/>
+        <Label Content="Proveedor" HorizontalAlignment="Left" Margin="220,241,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <TextBox x:Name="campoProveedor" HorizontalAlignment="Left" Margin="355,250,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnInsertar" Content="insertar" HorizontalAlignment="Left" Margin="355,306,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.909,-0.198" FontSize="22" Height="40" Width="117" Click="btnInsertar_Click"/>
+
+    </Grid>
+</Window>
